@@ -616,7 +616,89 @@ class Category_Girl extends StatelessWidget {
 class Category_Sellable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Scaffold(
+      body: Container(
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Sellable_Book1_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage("images/xinhua.jpg"),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('新华字典'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Sellable_Book2_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage('images/yueliang.jpg'),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('月亮与六便士'),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Sellable_Book3_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage('images/bainian.jpg'),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('百年孤独'),
+                  ],
+                ),
+                Column(
+                  children: [
+
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -663,22 +745,59 @@ class Category_Girl_Book3_Detail extends StatelessWidget {
 }
 
 class Category_Sellable_Book1_Detail extends StatelessWidget {
-  @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/xinhua.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '新中国成立后出版的第一部以白话释义、用白话举例的字典',
+            style: TextStyle(
+                color: Colors.black,
+                backgroundColor: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold
+            ),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '自出版以来，为中国文化水平的提高作出了历史性的贡献。',
+            style: TextStyle(
+              color: Colors.black,
+              backgroundColor: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
 class Category_Sellable_Book2_Detail extends StatelessWidget {
-  @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+
+      ),
+    );
   }
 }
 
 class Category_Sellable_Book3_Detail extends StatelessWidget {
-  @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+
+      ),
+    );
   }
 }
