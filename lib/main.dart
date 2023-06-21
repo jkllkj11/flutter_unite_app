@@ -475,6 +475,7 @@ class Bookshelf_Book1_Detail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
@@ -510,22 +511,91 @@ class Bookshelf_Book1_Detail extends StatelessWidget {
 
 class Bookshelf_Book2_Detail extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+ Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/honglou.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '清代曹雪芹',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '讲述的是发生在一个虚构朝代的封建大家庭中的人事物，其中以贾宝玉、林黛玉、薛宝钗三个人之间的感情纠葛为主线通过对一些日常事件的描述体现了在贾府的大观园中以金陵十二钗为主体的众女子的爱恨情愁。而在这同时又从贾府由富贵堂皇走向没落衰败的次线反映了一个大家族的没落历程和这个看似华丽的家族的丑陋的内在。',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
 class Bookshelf_Book3_Detail extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+   Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/honglou.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '付鹏',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '沈玉涵这是第三次因为那个怪异的东西夜半惊梦了。它早就被他销毁，在地球另一边的大英帝国。他起身看着镜子里自己五官深邃的脸，眼神迷离起来。这张亚洲脸上隐隐约约有白人的痕迹，源于他来自俄罗斯的祖母。这常让他被错当成图兰人。他一直为自己的中国',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
 class Bookshelf_Book4_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/shuihu.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '元末明初施耐庵',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '是以宋江领导的起义军为主要题材，通过一系列梁山英雄反抗压迫、英勇斗争的生动故事，暴露了北宋末年统治阶级的腐朽和残暴，揭露了当时尖锐对立的社会矛盾和“官逼民反”的残酷现实。',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
