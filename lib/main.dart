@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -36,7 +35,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String? registeredUsername;
   String? registeredPassword;
-
 
   void _navigateToLogin() {
     Navigator.pushNamed(context, '/login', arguments: {
@@ -179,7 +177,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, dynamic>? arguments =
-    ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
 
     if (arguments != null) {
       final String registeredUsername = arguments['registeredUsername'];
@@ -227,8 +225,8 @@ class LoginScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(100.0),
                       ),
-                      backgroundColor: Colors.red,
-                      foregroundColor: Colors.white,
+                      primary: Colors.red,
+                      onPrimary: Colors.white,
                       shadowColor: Colors.black54,
                       elevation: 4.0,
                     ),
@@ -284,7 +282,6 @@ class LoginScreen extends StatelessWidget {
     }
   }
 }
-
 
 class Book extends StatelessWidget {
   @override
@@ -346,19 +343,12 @@ class _MyHomePageState02 extends State<MyHomePage02> {
   }
 }
 
-
 class Bookshelf extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/OIP (1).jpg'), // 替换为你的图片路径
-            fit: BoxFit.cover,
-          ),
-        ),
+       
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -371,11 +361,12 @@ class Bookshelf extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Bookshelf_Book1_Detail()),
+                          MaterialPageRoute(
+                              builder: (context) => Bookshelf_Book1_Detail()),
                         );
                       },
                       child: Image(
-                        image: AssetImage("images/OIP (2).jpg"),
+                        image: AssetImage("images/sanguo.jpg"),
                         width: 200,
                         height: 200,
                       ),
@@ -389,16 +380,17 @@ class Bookshelf extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Bookshelf_Book2_Detail()),
+                          MaterialPageRoute(
+                              builder: (context) => Bookshelf_Book2_Detail()),
                         );
                       },
                       child: Image(
-                        image: AssetImage('images/OIP (3).jpg'),
+                        image: AssetImage('images/honglou.jpg'),
                         width: 200,
                         height: 200,
                       ),
                     ),
-                    Text('三国演义'),
+                    Text('红楼梦'),
                   ],
                 ),
               ],
@@ -413,11 +405,12 @@ class Bookshelf extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Bookshelf_Book3_Detail()),
+                          MaterialPageRoute(
+                              builder: (context) => Bookshelf_Book3_Detail()),
                         );
                       },
                       child: Image(
-                        image: AssetImage('images/OIP.jpg'),
+                        image: AssetImage('images/baiqiang.jpg'),
                         width: 200,
                         height: 200,
                       ),
@@ -431,11 +424,12 @@ class Bookshelf extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Bookshelf_Book4_Detail()),
+                          MaterialPageRoute(
+                              builder: (context) => Bookshelf_Book4_Detail()),
                         );
                       },
                       child: Image(
-                        image: AssetImage('images/R1.png'),
+                        image: AssetImage('images/shuihu.jpg'),
                         width: 200,
                         height: 200,
                       ),
@@ -477,133 +471,135 @@ class Category extends StatelessWidget {
   }
 }
 
-
-class Bookshelf_Book1_Detail extends StatelessWidget{
-  @override
+class Bookshelf_Book1_Detail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
-        child:Text('afgafagagaga'));
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/shuihu.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '元末明初施耐庵',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '是以宋江领导的起义军为主要题材，通过一系列梁山英雄反抗压迫、英勇斗争的生动故事，暴露了北宋末年统治阶级的腐朽和残暴，揭露了当时尖锐对立的社会矛盾和“官逼民反”的残酷现实。',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
-class Bookshelf_Book2_Detail extends StatelessWidget{
+class Bookshelf_Book2_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Bookshelf_Book3_Detail extends StatelessWidget{
+class Bookshelf_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Bookshelf_Book4_Detail extends StatelessWidget{
+class Bookshelf_Book4_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-
-class Category_Boy extends StatelessWidget{
+class Category_Boy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Girl extends StatelessWidget{
+class Category_Girl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Sellable extends StatelessWidget{
+class Category_Sellable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-
-class Category_Boy_Book1_Detail extends StatelessWidget{
+class Category_Boy_Book1_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Boy_Book2_Detail extends StatelessWidget{
+class Category_Boy_Book2_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Boy_Book3_Detail extends StatelessWidget{
+class Category_Boy_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Girl_Book1_Detail extends StatelessWidget{
+class Category_Girl_Book1_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Girl_Book2_Detail extends StatelessWidget{
+class Category_Girl_Book2_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Girl_Book3_Detail extends StatelessWidget{
+class Category_Girl_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Sellable_Book1_Detail extends StatelessWidget{
+class Category_Sellable_Book1_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Sellable_Book2_Detail extends StatelessWidget{
+class Category_Sellable_Book2_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
 
-class Category_Sellable_Book3_Detail extends StatelessWidget{
+class Category_Sellable_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child:Text('afgafagagaga'));
+    return Center(child: Text('afgafagagaga'));
   }
 }
