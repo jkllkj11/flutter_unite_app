@@ -486,7 +486,7 @@ class Bookshelf_Book1_Detail extends StatelessWidget {
           ),
           SizedBox(height: 16),
           Text(
-            '元末明初施耐庵',
+            '元末明初罗贯中',
             style: TextStyle(
                 color: Colors.black,
                 backgroundColor: Colors.white,
@@ -496,7 +496,7 @@ class Bookshelf_Book1_Detail extends StatelessWidget {
           ),
           SizedBox(height: 16),
           Text(
-            '是以宋江领导的起义军为主要题材，通过一系列梁山英雄反抗压迫、英勇斗争的生动故事，暴露了北宋末年统治阶级的腐朽和残暴，揭露了当时尖锐对立的社会矛盾和“官逼民反”的残酷现实。',
+            '故事开始于黄巾兵起义，结束于司马氏灭吴开晋，以描写战争为主，反映了魏、蜀汉、吴三个政治集团之间的政治和军事斗争，展现了从东汉末年到西晋初年之间近一百年的历史风云，并成功塑造了一批叱咤风云的英雄人物。',
             style: TextStyle(
                 color: Colors.black,
                 backgroundColor: Colors.white,
