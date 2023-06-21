@@ -480,7 +480,7 @@ class Bookshelf_Book1_Detail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Image(
-            image: AssetImage('images/shuihu.jpg'),
+            image: AssetImage('images/sanguo.jpg'),
             width: 200,
             height: 200,
           ),
@@ -549,7 +549,7 @@ class Bookshelf_Book3_Detail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Image(
-            image: AssetImage('images/honglou.jpg'),
+            image: AssetImage('images/baiqiang.jpg'),
             width: 200,
             height: 200,
           ),
