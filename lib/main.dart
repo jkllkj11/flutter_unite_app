@@ -600,9 +600,87 @@ class Bookshelf_Book4_Detail extends StatelessWidget {
 }
 
 class Category_Boy extends StatelessWidget {
-  @override
+   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Scaffold(
+      body: Container(
+       
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Boy_Book1_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage("images/jiaofu.jpg"),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('教父'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Boy_Book2_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage('images/xiyou.jpg'),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('西游记'),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Boy_Book3_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage('images/weicheng.jpg'),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('围城'),
+                  ],
+                ),
+                
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -782,21 +860,91 @@ class Category_Sellable extends StatelessWidget {
 class Category_Boy_Book1_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/jiaofu.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '意大利裔美国作家马里奥·普佐',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            ' 该小说主要描写了1945年至1955年之间，意大利移民科利奥尼家族在困境中的挣扎和生存之道，科利奥尼家族是五大黑帮势力集团之一，为了能够生存不惜进行各种残忍的攻略，用枪、用斧头、用刑具，最后在斗争激烈的环境下生存了下来，实现了对美国黑帮势力的统一。',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
+
 }
 
 class Category_Boy_Book2_Detail extends StatelessWidget {
-  @override
+   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/xiyou.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '明代吴承恩',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            ' 该小说主要讲述了孙悟空出世，跟随菩提祖师学艺及大闹天宫后，遇见了唐僧、猪八戒、沙僧和白龙马，西行取经，一路上历经艰险，降妖除魔，经历了九九八十一难，终于到达西天见到如来佛祖，最终五圣成真的故事。',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
 class Category_Boy_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/weicheng.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '钱钟书',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '  世事如围城，外边的人想进去，里面的人想出来.',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
