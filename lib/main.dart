@@ -609,7 +609,84 @@ class Category_Boy extends StatelessWidget {
 class Category_Girl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Scaffold(
+      body: Container(
+       
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Girl_Book1_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage("images/jianai.jpg"),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('简爱'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Girl_Book2_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage('images/xiaofuren.jpg'),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('小妇人'),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Category_Girl_Book3_Detail()),
+                        );
+                      },
+                      child: Image(
+                        image: AssetImage('images/piao.jpg'),
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                    Text('飘'),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -726,21 +803,90 @@ class Category_Boy_Book3_Detail extends StatelessWidget {
 class Category_Girl_Book1_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/jianai.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '英国夏洛蒂·勃朗特',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '该小说讲述了失去父母的女孩简被庄园主人罗切斯特暗恋，在偶然得知罗切斯特是有妇之夫，而且还向她隐瞒了惊人真相后，简陷入了迷茫、挣扎、苦痛的故事，暴露和批判了西方资本主义社会黑暗面。',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
 class Category_Girl_Book2_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/xiaofuren.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '美国路易莎·梅·奥尔科特',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '该作是一部以美国南北战争为背景，以19世纪美国新英格兰地区的一个普通家庭四个姐妹之间的生活琐事为蓝本的带有自传色彩的家庭伦理小说。',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
 class Category_Girl_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('afgafagagaga'));
+    return Center(
+      child: Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/piao.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '美国玛格丽特·米切尔',
+            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            '该作以亚特兰大以及附近的一个种植园为故事场景，描绘了内战前后美国南方人的生活。 以主人公的爱情纠缠为主线，成功地再现了 林肯 时期的南北战争以及美国南方地区的社会生活。',
+            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+          ),
+        ],
+      ),
+    );
   }
 }
 
