@@ -325,15 +325,11 @@ class _MyHomePageState02 extends State<MyHomePage02> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: '书架',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.sort),
+            label: '分类',
           ),
         ],
         currentIndex: _selectedIndex,
@@ -453,10 +449,14 @@ class Category extends StatelessWidget {
       length: 3,
       child: Column(
         children: [
-          const TabBar(tabs: [
-            Tab(text: '男生'),
-            Tab(text: '女生'),
-            Tab(text: '热销'),
+          const TabBar(
+            indicatorColor:Colors.blue,
+            labelColor:Colors.blue,
+            unselectedLabelColor:Colors.black,
+            tabs: [
+              Tab(text: '男生'),
+              Tab(text: '女生'),
+              Tab(text: '热销'),
           ]),
           Expanded(
             child: TabBarView(children: [
@@ -486,12 +486,21 @@ class Bookshelf_Book1_Detail extends StatelessWidget {
           SizedBox(height: 16),
           Text(
             '元末明初施耐庵',
-            style: TextStyle(color: Colors.black,fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.black,
+                backgroundColor: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold
+            ),
           ),
           SizedBox(height: 16),
           Text(
             '是以宋江领导的起义军为主要题材，通过一系列梁山英雄反抗压迫、英勇斗争的生动故事，暴露了北宋末年统治阶级的腐朽和残暴，揭露了当时尖锐对立的社会矛盾和“官逼民反”的残酷现实。',
-            style: TextStyle(color: Colors.black,fontSize: 18, fontStyle: FontStyle.italic),
+            style: TextStyle(
+                color: Colors.black,
+                backgroundColor: Colors.white,
+                fontSize: 18,
+            ),
           ),
         ],
       ),
