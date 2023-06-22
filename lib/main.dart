@@ -361,8 +361,7 @@ class Bookshelf extends StatelessWidget {
                         );
                         
                       },
-                      child: Image(
-                        image: AssetImage("images/sanguo.jpg"),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/bainian.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -380,8 +379,7 @@ class Bookshelf extends StatelessWidget {
                               builder: (context) => Bookshelf_Book2_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/honglou.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/honglou.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -405,8 +403,7 @@ class Bookshelf extends StatelessWidget {
                               builder: (context) => Bookshelf_Book3_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/baiqiang.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/baiqiang.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -424,8 +421,7 @@ class Bookshelf extends StatelessWidget {
                               builder: (context) => Bookshelf_Book4_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/shuihu.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/shuihu.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -473,42 +469,45 @@ class Category extends StatelessWidget {
 
 class Bookshelf_Book1_Detail extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-         
-          Image(
-            image: AssetImage('images/sanguo.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '元末明初罗贯中',
-            style: TextStyle(
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+          
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/sanguo.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '元末明初罗贯中',
+              style: TextStyle(
+                  color: Colors.black,
+                  backgroundColor: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '故事开始于黄巾兵起义，结束于司马氏灭吴开晋，以描写战争为主，反映了魏、蜀汉、吴三个政治集团之间的政治和军事斗争，展现了从东汉末年到西晋初年之间近一百年的历史风云，并成功塑造了一批叱咤风云的英雄人物。',
+              style: TextStyle(
                 color: Colors.black,
                 backgroundColor: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '故事开始于黄巾兵起义，结束于司马氏灭吴开晋，以描写战争为主，反映了魏、蜀汉、吴三个政治集团之间的政治和军事斗争，展现了从东汉末年到西晋初年之间近一百年的历史风云，并成功塑造了一批叱咤风云的英雄人物。',
-            style: TextStyle(
-              color: Colors.black,
-              backgroundColor: Colors.white,
-              fontSize: 18,
-            ),
-          ), 
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+                fontSize: 18,
+              ),
+            ), 
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )
+      
     );
   }
 }
@@ -516,35 +515,38 @@ class Bookshelf_Book1_Detail extends StatelessWidget {
 class Bookshelf_Book2_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/honglou.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '清代曹雪芹',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '讲述的是发生在一个虚构朝代的封建大家庭中的人事物，其中以贾宝玉、林黛玉、薛宝钗三个人之间的感情纠葛为主线通过对一些日常事件的描述体现了在贾府的大观园中以金陵十二钗为主体的众女子的爱恨情愁。而在这同时又从贾府由富贵堂皇走向没落衰败的次线反映了一个大家族的没落历程和这个看似华丽的家族的丑陋的内在。',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/honglou%20copy.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '清代曹雪芹',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '讲述的是发生在一个虚构朝代的封建大家庭中的人事物，其中以贾宝玉、林黛玉、薛宝钗三个人之间的感情纠葛为主线通过对一些日常事件的描述体现了在贾府的大观园中以金陵十二钗为主体的众女子的爱恨情愁。而在这同时又从贾府由富贵堂皇走向没落衰败的次线反映了一个大家族的没落历程和这个看似华丽的家族的丑陋的内在。',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )
+      
     );
   }
 }
@@ -552,35 +554,38 @@ class Bookshelf_Book2_Detail extends StatelessWidget {
 class Bookshelf_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/baiqiang.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '付鹏',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '沈玉涵这是第三次因为那个怪异的东西夜半惊梦了。它早就被他销毁，在地球另一边的大英帝国。他起身看着镜子里自己五官深邃的脸，眼神迷离起来。这张亚洲脸上隐隐约约有白人的痕迹，源于他来自俄罗斯的祖母。这常让他被错当成图兰人。他一直为自己的中国',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/baiqiang.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '付鹏',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '沈玉涵这是第三次因为那个怪异的东西夜半惊梦了。它早就被他销毁，在地球另一边的大英帝国。他起身看着镜子里自己五官深邃的脸，眼神迷离起来。这张亚洲脸上隐隐约约有白人的痕迹，源于他来自俄罗斯的祖母。这常让他被错当成图兰人。他一直为自己的中国',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )
+      
     );
   }
 }
@@ -588,35 +593,38 @@ class Bookshelf_Book3_Detail extends StatelessWidget {
 class Bookshelf_Book4_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/shuihu.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '元末明初施耐庵',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '是以宋江领导的起义军为主要题材，通过一系列梁山英雄反抗压迫、英勇斗争的生动故事，暴露了北宋末年统治阶级的腐朽和残暴，揭露了当时尖锐对立的社会矛盾和“官逼民反”的残酷现实。',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/shuihu.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '元末明初施耐庵',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '是以宋江领导的起义军为主要题材，通过一系列梁山英雄反抗压迫、英勇斗争的生动故事，暴露了北宋末年统治阶级的腐朽和残暴，揭露了当时尖锐对立的社会矛盾和“官逼民反”的残酷现实。',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )
+      
     );
   }
 }
@@ -643,8 +651,7 @@ class Category_Boy extends StatelessWidget {
                                   Category_Boy_Book1_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage("images/jiaofu.jpg"),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/jiaofu.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -663,8 +670,7 @@ class Category_Boy extends StatelessWidget {
                                   Category_Boy_Book2_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/xiyou.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/xiyou.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -689,8 +695,7 @@ class Category_Boy extends StatelessWidget {
                                   Category_Boy_Book3_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/weicheng.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/weicheng.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -729,8 +734,7 @@ class Category_Girl extends StatelessWidget {
                                   Category_Girl_Book1_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage("images/jianai.jpg"),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/jianai.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -749,8 +753,7 @@ class Category_Girl extends StatelessWidget {
                                   Category_Girl_Book2_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/xiaofuren.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/xiaofuren.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -775,8 +778,7 @@ class Category_Girl extends StatelessWidget {
                                   Category_Girl_Book3_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/piao.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/piao.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -815,8 +817,7 @@ class Category_Sellable extends StatelessWidget {
                                   Category_Sellable_Book1_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage("images/xinhua.jpg"),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/xinhua.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -835,8 +836,7 @@ class Category_Sellable extends StatelessWidget {
                                   Category_Sellable_Book2_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/yueliang.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/yueliang.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
@@ -861,17 +861,13 @@ class Category_Sellable extends StatelessWidget {
                                   Category_Sellable_Book3_Detail()),
                         );
                       },
-                      child: Image(
-                        image: AssetImage('images/bainian.jpg'),
+                      child: Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/bainian.jpg?raw=true",
                         width: 200,
                         height: 200,
                       ),
                     ),
                     Text('百年孤独'),
                   ],
-                ),
-                Column(
-                  children: [],
                 ),
               ],
             ),
@@ -885,35 +881,37 @@ class Category_Sellable extends StatelessWidget {
 class Category_Boy_Book1_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/jiaofu.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '意大利裔美国作家马里奥·普佐',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            ' 该小说主要描写了1945年至1955年之间，意大利移民科利奥尼家族在困境中的挣扎和生存之道，科利奥尼家族是五大黑帮势力集团之一，为了能够生存不惜进行各种残忍的攻略，用枪、用斧头、用刑具，最后在斗争激烈的环境下生存了下来，实现了对美国黑帮势力的统一。',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/jiaofu.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '意大利裔美国作家马里奥·普佐',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              ' 该小说主要描写了1945年至1955年之间，意大利移民科利奥尼家族在困境中的挣扎和生存之道，科利奥尼家族是五大黑帮势力集团之一，为了能够生存不惜进行各种残忍的攻略，用枪、用斧头、用刑具，最后在斗争激烈的环境下生存了下来，实现了对美国黑帮势力的统一。',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )
     );
   }
 }
@@ -921,35 +919,37 @@ class Category_Boy_Book1_Detail extends StatelessWidget {
 class Category_Boy_Book2_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/xiyou.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '明代吴承恩',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            ' 该小说主要讲述了孙悟空出世，跟随菩提祖师学艺及大闹天宫后，遇见了唐僧、猪八戒、沙僧和白龙马，西行取经，一路上历经艰险，降妖除魔，经历了九九八十一难，终于到达西天见到如来佛祖，最终五圣成真的故事。',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/xiyou.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '明代吴承恩',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              ' 该小说主要讲述了孙悟空出世，跟随菩提祖师学艺及大闹天宫后，遇见了唐僧、猪八戒、沙僧和白龙马，西行取经，一路上历经艰险，降妖除魔，经历了九九八十一难，终于到达西天见到如来佛祖，最终五圣成真的故事。',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )     
     );
   }
 }
@@ -957,35 +957,37 @@ class Category_Boy_Book2_Detail extends StatelessWidget {
 class Category_Boy_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/weicheng.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '钱钟书',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '  世事如围城，外边的人想进去，里面的人想出来.',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/weicheng.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '钱钟书',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '  世事如围城，外边的人想进去，里面的人想出来.',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )   
     );
   }
 }
@@ -993,34 +995,36 @@ class Category_Boy_Book3_Detail extends StatelessWidget {
 class Category_Girl_Book1_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/jianai.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '英国夏洛蒂·勃朗特',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '该小说讲述了失去父母的女孩简被庄园主人罗切斯特暗恋，在偶然得知罗切斯特是有妇之夫，而且还向她隐瞒了惊人真相后，简陷入了迷茫、挣扎、苦痛的故事，暴露和批判了西方资本主义社会黑暗面。',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/jianai.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '英国夏洛蒂·勃朗特',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '该小说讲述了失去父母的女孩简被庄园主人罗切斯特暗恋，在偶然得知罗切斯特是有妇之夫，而且还向她隐瞒了惊人真相后，简陷入了迷茫、挣扎、苦痛的故事，暴露和批判了西方资本主义社会黑暗面。',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
       ),
     );
   }
@@ -1029,35 +1033,37 @@ class Category_Girl_Book1_Detail extends StatelessWidget {
 class Category_Girl_Book2_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/xiaofuren.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '美国路易莎·梅·奥尔科特',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '该作是一部以美国南北战争为背景，以19世纪美国新英格兰地区的一个普通家庭四个姐妹之间的生活琐事为蓝本的带有自传色彩的家庭伦理小说。',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/xiaofuren.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '美国路易莎·梅·奥尔科特',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '该作是一部以美国南北战争为背景，以19世纪美国新英格兰地区的一个普通家庭四个姐妹之间的生活琐事为蓝本的带有自传色彩的家庭伦理小说。',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )     
     );
   }
 }
@@ -1065,160 +1071,169 @@ class Category_Girl_Book2_Detail extends StatelessWidget {
 class Category_Girl_Book3_Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/piao.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '美国玛格丽特·米切尔',
-            style: TextStyle(
-                color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '该作以亚特兰大以及附近的一个种植园为故事场景，描绘了内战前后美国南方人的生活。 以主人公的爱情纠缠为主线，成功地再现了 林肯 时期的南北战争以及美国南方地区的社会生活。',
-            style: TextStyle(
-                color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/piao.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '美国玛格丽特·米切尔',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '该作以亚特兰大以及附近的一个种植园为故事场景，描绘了内战前后美国南方人的生活。 以主人公的爱情纠缠为主线，成功地再现了 林肯 时期的南北战争以及美国南方地区的社会生活。',
+              style: TextStyle(
+                  color: Colors.black, fontSize: 18, fontStyle: FontStyle.italic),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),  
+      )     
     );
   }
 }
 
 class Category_Sellable_Book1_Detail extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/xinhua.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '新中国成立后出版的第一部以白话释义、用白话举例的字典',
-            style: TextStyle(
-                color: Colors.black,
-                backgroundColor: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '自出版以来，为中国文化水平的提高作出了历史性的贡献。',
-            style: TextStyle(
-              color: Colors.black,
-              backgroundColor: Colors.white,
-              fontSize: 18,
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+          child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/xinhua.jpg?raw=true",
+              width: 200,
+              height: 200,
             ),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+            SizedBox(height: 16),
+            Text(
+              '新中国成立后出版的第一部以白话释义、用白话举例的字典',
+              style: TextStyle(
+                  color: Colors.black,
+                
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '自出版以来，为中国文化水平的提高作出了历史性的贡献。',
+              style: TextStyle(
+                color: Colors.black,
+              
+                fontSize: 18,
+              ),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),
+      )     
     );
   }
 }
 
 class Category_Sellable_Book2_Detail extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
+    return Container(
+      color: Colors.white, // set background color to white
+      child: Center(
+          child: Column(
 
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/yueliang.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '英国威廉·萨默塞特·毛姆',
-            style: TextStyle(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/yueliang.jpg?raw=true",
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 16),
+            Text(
+              '英国威廉·萨默塞特·毛姆',
+              style: TextStyle(
+                  color: Colors.black,
+                  
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold
+              ),
+            ),
+            SizedBox(height: 16),
+            Text(
+              '描述了一个原本平凡的伦敦证券经纪人思特里克兰德，突然着了艺术的魔，抛妻弃子，绝弃了旁人看来优裕美满的生活，奔赴南太平洋的塔希提岛，用画笔谱写出自己光辉灿烂的生命，把生命的价值全部注入绚烂的画布的故事。',
+              style: TextStyle(
                 color: Colors.black,
-                backgroundColor: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold
+                
+                fontSize: 18,
+              ),
             ),
-          ),
-          SizedBox(height: 16),
-          Text(
-            '描述了一个原本平凡的伦敦证券经纪人思特里克兰德，突然着了艺术的魔，抛妻弃子，绝弃了旁人看来优裕美满的生活，奔赴南太平洋的塔希提岛，用画笔谱写出自己光辉灿烂的生命，把生命的价值全部注入绚烂的画布的故事。',
-            style: TextStyle(
-              color: Colors.black,
-              backgroundColor: Colors.white,
-              fontSize: 18,
-            ),
-          ),
-           const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),
+      )     
     );
   }
 }
 
 class Category_Sellable_Book3_Detail extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            image: AssetImage('images/bainian.jpg'),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(height: 16),
-          Text(
-            '哥伦比亚作家加西亚·马尔克斯',
-            style: TextStyle(
-                color: Colors.black,
-                backgroundColor: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 16),
-          Text(
-            ' 作品描写了布恩迪亚家族七代人的传奇故事，以及加勒比海沿岸小镇马孔多的百年兴衰，反映了拉丁美洲一个世纪以来风云变幻的历史。',
-            style: TextStyle(
-              color: Colors.black,
-              backgroundColor: Colors.white,
-              fontSize: 18,
+
+    return Container(
+      color: Colors.white, // set background color to white
+      child:Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Image.network("https://github.com/jkllkj11/flutter_unite_app/blob/main/images/bainian.jpg?raw=true",
+              width: 200,
+              height: 200,
             ),
-          ),
-          const Text(''),
-                        ElevatedButton(
-                          child: const Text('返回'),
-                          onPressed: () {
-                            Navigator.pop(context);},),
-        ],
-      ),
+            SizedBox(height: 16),
+            Text(
+              '哥伦比亚作家加西亚·马尔克斯',
+              style: TextStyle(
+                  color: Colors.black,
+                  
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text(
+              ' 作品描写了布恩迪亚家族七代人的传奇故事，以及加勒比海沿岸小镇马孔多的百年兴衰，反映了拉丁美洲一个世纪以来风云变幻的历史。',
+              style: TextStyle(
+                color: Colors.black,
+                
+                fontSize: 18,
+              ),
+            ),
+            const Text(''),
+                          ElevatedButton(
+                            child: const Text('返回'),
+                            onPressed: () {
+                              Navigator.pop(context);},),
+          ],
+        ),
+      )
     );
   }
 }
