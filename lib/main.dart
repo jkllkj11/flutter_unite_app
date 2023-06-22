@@ -1086,11 +1086,38 @@ class Category_Sellable_Book2_Detail extends StatelessWidget {
   }
 }
 
+
 class Category_Sellable_Book3_Detail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image(
+            image: AssetImage('images/bainian.jpg'),
+            width: 200,
+            height: 200,
+          ),
+          SizedBox(height: 16),
+          Text(
+            '哥伦比亚作家加西亚·马尔克斯',
+            style: TextStyle(
+                color: Colors.black,
+                backgroundColor: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 16),
+          Text(
+            ' 作品描写了布恩迪亚家族七代人的传奇故事，以及加勒比海沿岸小镇马孔多的百年兴衰，反映了拉丁美洲一个世纪以来风云变幻的历史。',
+            style: TextStyle(
+              color: Colors.black,
+              backgroundColor: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+        ],
       ),
     );
   }
